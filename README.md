@@ -5,12 +5,16 @@ Statische Website für LHCoding (Kleingewerbe von Nils Wiesmann, seit 2016): Fah
 ## Struktur
 
 - `index.html` — Startseite
-- `shop.html` — Leistungsverzeichnis mit Preisen und Anfrageformular (mailto-basiert, kein Server/Zahlungsanbieter nötig)
+- `ueber-uns.html` — Über uns (Firmengeschichte, klare Abgrenzung zu Auto-Intern/vcds.de)
+- `werkzeuge.html` — Werkzeuge & Systeme (VCDS, VCP, ODIS, SFD/SFD2 im Detail)
+- `portfolio.html` — Beispielhafte Projektarten
+- `shop.html` — Leistungsverzeichnis mit Preisen, Warenkorb und Anfrageformular (mailto-basiert, kein Server/Zahlungsanbieter nötig)
+- `img/*.svg` — eigene, abstrakte Illustrationen (keine Fotos)
 - `impressum.html` — Impressum
 - `datenschutz.html` — Datenschutzerklärung
 - `agb.html` — Allgemeine Geschäftsbedingungen (Muster-Entwurf, siehe Hinweis unten)
 - `widerruf.html` — Widerrufsbelehrung + Muster-Widerrufsformular (Muster-Entwurf, siehe Hinweis unten)
-- `css/style.css`, `js/script.js` — Styles, E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
+- `css/style.css`, `js/script.js` — Styles (inkl. Light/Dark-Mode-Umschalter, per Klick änderbar und in `localStorage` gemerkt), E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
 - `WOOCOMMERCE-PLAN.md` — Konzept für eine spätere WordPress+WooCommerce-Anbindung (aktuell inaktiv, siehe unten)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 

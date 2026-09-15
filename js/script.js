@@ -1,3 +1,41 @@
+/* Theme (Dark/Light) */
+const THEME_KEY = "lhcoding_theme";
+const themeToggle = document.getElementById("themeToggle");
+
+function applyTheme(theme) {
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  if (themeToggle) {
+    themeToggle.textContent = theme === "light" ? "Dark Mode" : "Light Mode";
+  }
+}
+
+(function initTheme() {
+  let saved = null;
+  try {
+    saved = localStorage.getItem(THEME_KEY);
+  } catch (e) {
+    /* localStorage nicht verfügbar */
+  }
+  applyTheme(saved === "light" ? "light" : "dark");
+})();
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+    const next = isLight ? "dark" : "light";
+    applyTheme(next);
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch (e) {
+      /* localStorage nicht verfügbar — Auswahl gilt nur für diesen Seitenaufruf */
+    }
+  });
+}
+
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
