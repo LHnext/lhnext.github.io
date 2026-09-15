@@ -44,17 +44,16 @@ npx serve .
 
 ## Veröffentlichen mit GitHub Pages
 
-1. Neues Repository auf GitHub anlegen, z. B. `lhcoding` unter dem Account `nirvananils`.
-2. In diesem Ordner:
+Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHCoding — automatisch mit dorthin umgeleitet. Deshalb läuft LHCoding über eine eigene, kostenlose GitHub-Organisation:
+
+1. Organisation `lhcoding59348` auf GitHub angelegt.
+2. Darin ein Repository angelegt, das exakt `lhcoding59348.github.io` heißt (nur dieser exakte Name ergibt eine eigene `*.github.io`-Domain).
+3. Lokales Repo darauf verbunden:
 
    ```
-   git init
-   git add .
-   git commit -m "Initial commit: LHCoding Website"
-   git branch -M main
-   git remote add origin https://github.com/nirvananils/lhcoding.git
+   git remote add origin https://github.com/lhcoding59348/lhcoding59348.github.io.git
    git push -u origin main
    ```
 
-3. Auf GitHub: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, Branch `main`, Ordner `/ (root)` auswählen und speichern.
-4. Nach kurzer Zeit ist die Seite unter `https://nirvananils.github.io/lhcoding/` erreichbar.
+4. Für Repos mit dem Namensmuster `<name>.github.io` aktiviert GitHub Pages sich in der Regel automatisch; falls nicht, unter **Settings → Pages → Build and deployment → Source: Deploy from a branch**, Branch `main`, Ordner `/ (root)` einstellen.
+5. Die Seite ist unter `https://lhcoding59348.github.io/` erreichbar — unabhängig von `nirvananils.github.io`/`nilswiesmann.net`.

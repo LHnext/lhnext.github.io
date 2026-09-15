@@ -13,12 +13,12 @@ Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig is
 
 ## Seiten
 
-- [Startseite](https://nirvananils.github.io/lhcoding/index.html): Überblick über Leistungen, Ablauf und Kontakt
-- [Leistungen & Preise](https://nirvananils.github.io/lhcoding/shop.html): Leistungsverzeichnis mit Anfrageformular
-- [Impressum](https://nirvananils.github.io/lhcoding/impressum.html): Rechtliche Anbieterkennzeichnung
-- [Datenschutz](https://nirvananils.github.io/lhcoding/datenschutz.html): Datenschutzerklärung
-- [AGB](https://nirvananils.github.io/lhcoding/agb.html): Allgemeine Geschäftsbedingungen
-- [Widerruf](https://nirvananils.github.io/lhcoding/widerruf.html): Widerrufsbelehrung für Verbraucher
+- [Startseite](https://lhcoding59348.github.io/index.html): Überblick über Leistungen, Ablauf und Kontakt
+- [Leistungen & Preise](https://lhcoding59348.github.io/shop.html): Leistungsverzeichnis mit Anfrageformular
+- [Impressum](https://lhcoding59348.github.io/impressum.html): Rechtliche Anbieterkennzeichnung
+- [Datenschutz](https://lhcoding59348.github.io/datenschutz.html): Datenschutzerklärung
+- [AGB](https://lhcoding59348.github.io/agb.html): Allgemeine Geschäftsbedingungen
+- [Widerruf](https://lhcoding59348.github.io/widerruf.html): Widerrufsbelehrung für Verbraucher
 
 ## Kontakt
 
@@ -27,4 +27,4 @@ Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig is
 
 ## Hinweis
 
-Live-Domain: https://nirvananils.github.io/lhcoding/
+Live-Domain: https://lhcoding59348.github.io/
