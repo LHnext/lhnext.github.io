@@ -65,9 +65,21 @@ if (requestForm) {
     const fahrzeug = data.get("fahrzeug") || "";
     const termin = data.get("termin") || "";
     const message = data.get("message") || "";
+    const cartItems = data.get("cartItems") || "";
 
-    const subject = `Anfrage: ${leistung || "Leistung"}`;
+    const subject = cartItems
+      ? "Anfrage: mehrere Leistungen (Warenkorb)"
+      : `Anfrage: ${leistung || "Leistung"}`;
+
+    const cartBlock = cartItems
+      ? `Ausgewählte Leistungen (Warenkorb):\n${cartItems
+          .split("|")
+          .map((item) => `- ${item}`)
+          .join("\n")}\n\n`
+      : "";
+
     const body =
+      cartBlock +
       `Name: ${name}\n` +
       `E-Mail: ${email}\n` +
       `Telefon: ${phone}\n` +
@@ -87,4 +99,109 @@ if (requestForm) {
     window.location.href =
       `mailto:${recipients}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
+}
+
+/* Warenkorb (rein clientseitig, keine Server-/Zahlungsanbindung) */
+const CART_KEY = "lhcoding_cart";
+
+function getCart() {
+  try {
+    const raw = localStorage.getItem(CART_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveCart(items) {
+  try {
+    localStorage.setItem(CART_KEY, JSON.stringify(items));
+  } catch (e) {
+    /* localStorage nicht verfügbar (z. B. privater Modus) — Warenkorb bleibt nur im Speicher der Seite */
+  }
+}
+
+const cartToggle = document.getElementById("cartToggle");
+const cartPanel = document.getElementById("cartPanel");
+const cartCount = document.getElementById("cartCount");
+const cartList = document.getElementById("cartList");
+const cartEmpty = document.getElementById("cartEmpty");
+const cartToRequest = document.getElementById("cartToRequest");
+const cartSummaryRow = document.getElementById("cartSummaryRow");
+const cartSummaryList = document.getElementById("cartSummaryList");
+const cartItemsField = document.getElementById("cartItemsField");
+
+if (cartToggle && cartPanel) {
+  function renderCart() {
+    const items = getCart();
+
+    if (cartCount) cartCount.textContent = String(items.length);
+
+    if (cartList) {
+      cartList.innerHTML = "";
+      items.forEach((item) => {
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        span.textContent = item;
+        const removeBtn = document.createElement("button");
+        removeBtn.type = "button";
+        removeBtn.className = "cart-remove";
+        removeBtn.setAttribute("aria-label", `${item} entfernen`);
+        removeBtn.textContent = "×";
+        removeBtn.addEventListener("click", () => {
+          saveCart(getCart().filter((i) => i !== item));
+          renderCart();
+        });
+        li.append(span, removeBtn);
+        cartList.appendChild(li);
+      });
+    }
+
+    if (cartEmpty) cartEmpty.hidden = items.length > 0;
+    if (cartToRequest) cartToRequest.hidden = items.length === 0;
+
+    if (cartSummaryRow && cartSummaryList) {
+      if (items.length > 0) {
+        cartSummaryRow.hidden = false;
+        cartSummaryList.innerHTML = "";
+        items.forEach((item) => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          cartSummaryList.appendChild(li);
+        });
+      } else {
+        cartSummaryRow.hidden = true;
+      }
+    }
+
+    if (cartItemsField) cartItemsField.value = items.join("|");
+
+    document.querySelectorAll("[data-cart-add]").forEach((btn) => {
+      const name = btn.getAttribute("data-cart-add");
+      btn.dataset.added = items.includes(name) ? "true" : "false";
+      btn.textContent = items.includes(name) ? "Im Warenkorb ✓" : "In den Warenkorb";
+    });
+  }
+
+  cartToggle.addEventListener("click", () => {
+    const isOpen = cartPanel.hidden;
+    cartPanel.hidden = !isOpen;
+    cartToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.querySelectorAll("[data-cart-add]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const name = btn.getAttribute("data-cart-add");
+      const items = getCart();
+      if (!items.includes(name)) {
+        items.push(name);
+        saveCart(items);
+      }
+      renderCart();
+      cartPanel.hidden = false;
+      cartToggle.setAttribute("aria-expanded", "true");
+    });
+  });
+
+  renderCart();
 }

@@ -48,51 +48,79 @@
           <h3>Steuergeräte-Codierung</h3>
           <div class="price">ab <span class="placeholder">[PREIS ERGÄNZEN]</span><small>je nach Umfang</small></div>
           <p>Anpassung und Konfiguration von Steuergeräte-Funktionen und Datensätzen an Fahrzeug- und Kundenanforderungen.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="Steuergeräte-Codierung">In den Warenkorb</button>
+          </div>
         </div>
 
         <div class="price-card">
           <h3>SFD-Freischaltung</h3>
           <div class="price"><span class="placeholder">[PREIS ERGÄNZEN]</span><small>pro Fahrzeug/Steuergerät</small></div>
           <p>Freischaltung SFD-geschützter Steuergeräte über zertifizierte Zugangswege, inkl. Dokumentation.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="SFD-Freischaltung">In den Warenkorb</button>
+          </div>
         </div>
 
         <div class="price-card">
           <h3>SFD2-Freischaltung</h3>
           <div class="price"><span class="placeholder">[PREIS ERGÄNZEN]</span><small>pro Fahrzeug/Steuergerät</small></div>
           <p>Freischaltung SFD2-geschützter Steuergeräte für neuere Fahrzeuggenerationen.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="SFD2-Freischaltung">In den Warenkorb</button>
+          </div>
         </div>
 
         <div class="price-card">
           <h3>Diagnose (VCDS/VCP/ODIS)</h3>
           <div class="price">ab <span class="placeholder">[PREIS ERGÄNZEN]</span><small>pro Stunde</small></div>
           <p>Systematische Fehlerspeicheranalyse und Diagnose bei komplexen oder wiederkehrenden Problemen.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="Diagnose (VCDS/VCP/ODIS)">In den Warenkorb</button>
+          </div>
         </div>
 
         <div class="price-card">
           <h3>VCDS-Schulung (Halbtag)</h3>
           <div class="price"><span class="placeholder">[PREIS ERGÄNZEN]</span><small>pro Termin</small></div>
           <p>Grundlagen bis Praxis: Fehlerspeicher, Grundeinstellungen, Codierung — für Werkstattteams.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="VCDS-Schulung (Halbtag)">In den Warenkorb</button>
+          </div>
         </div>
 
         <div class="price-card">
           <h3>VCP-Schulung (Halbtag)</h3>
           <div class="price"><span class="placeholder">[PREIS ERGÄNZEN]</span><small>pro Termin</small></div>
           <p>Diagnose bei gateway-basierten E/E-Architekturen moderner Fahrzeuggenerationen.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="VCP-Schulung (Halbtag)">In den Warenkorb</button>
+          </div>
         </div>
 
         <div class="price-card">
           <h3>Individuelle Anfrage</h3>
           <div class="price">Nach Absprache</div>
           <p>Eigenes Thema, eigener Fahrzeugfall oder Kombination mehrerer Leistungen? Einfach unverbindlich anfragen.</p>
-          <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+          <div class="price-card-actions">
+            <a href="#anfrage" class="btn btn-ghost">Jetzt anfragen</a>
+            <button type="button" class="btn btn-cart" data-cart-add="Individuelle Anfrage">In den Warenkorb</button>
+          </div>
         </div>
       </div>
+
+      <!--
+        Geplante Erweiterung: WordPress + WooCommerce als vollwertiger Online-Shop
+        mit echter Zahlungsabwicklung. Aktuell bewusst NICHT aktiv, da dafür echtes
+        PHP/MySQL-Hosting nötig ist (GitHub Pages liefert nur statische Dateien).
+        Migrationsplan siehe WOOCOMMERCE-PLAN.md im Repository-Root.
+      -->
 
     </div>
   </section>
@@ -104,6 +132,10 @@
       <p>Formular ausfüllen — beim Absenden öffnet sich dein E-Mail-Programm mit einer vorausgefüllten, unverbindlichen Anfrage an uns. Es werden keine Daten über die Website an einen Server übertragen (siehe <a href="datenschutz.html">Datenschutzerklärung</a>).</p>
 
       <form id="requestForm" class="booking-form" data-reveal-enc="bGhjb2Rpbmc1OTM0OEBnbWFpbC5jb20sbmlscy53aWVzbWFubkBncnVwcGUuYWk=">
+        <div class="form-row form-row-full" id="cartSummaryRow" hidden>
+          <label>Ausgewählte Leistungen (Warenkorb)</label>
+          <ul id="cartSummaryList" class="cart-summary-list"></ul>
+        </div>
         <div class="form-row">
           <label for="name">Name *</label>
           <input type="text" id="name" name="name" required>
@@ -141,6 +173,7 @@
           <label for="message">Nachricht</label>
           <textarea id="message" name="message" rows="4" placeholder="Kurze Beschreibung des Anliegens"></textarea>
         </div>
+        <input type="hidden" id="cartItemsField" name="cartItems" value="">
         <div class="form-row form-row-full">
           <button type="submit" class="btn btn-primary">Anfrage per E-Mail senden</button>
         </div>
@@ -172,6 +205,18 @@
     </nav>
   </div>
 </footer>
+
+<div class="cart-widget">
+  <button type="button" id="cartToggle" class="cart-toggle" aria-expanded="false">
+    Warenkorb <span id="cartCount" class="cart-count">0</span>
+  </button>
+  <div id="cartPanel" class="cart-panel" hidden>
+    <h3>Warenkorb</h3>
+    <ul id="cartList" class="cart-list"></ul>
+    <p id="cartEmpty" class="cart-empty">Noch keine Leistung ausgewählt.</p>
+    <a href="#anfrage" id="cartToRequest" class="btn btn-primary cart-to-request" hidden>Zur Anfrage</a>
+  </div>
+</div>
 
 <script src="js/script.js"></script>
 </body>

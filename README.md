@@ -10,7 +10,8 @@ Statische Website für LHCoding (Kleingewerbe von Nils Wiesmann, seit 2016): Fah
 - `datenschutz.html` — Datenschutzerklärung
 - `agb.html` — Allgemeine Geschäftsbedingungen (Muster-Entwurf, siehe Hinweis unten)
 - `widerruf.html` — Widerrufsbelehrung + Muster-Widerrufsformular (Muster-Entwurf, siehe Hinweis unten)
-- `css/style.css`, `js/script.js` — Styles, E-Mail-Verschleierung, Anfrageformular-Logik
+- `css/style.css`, `js/script.js` — Styles, E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
+- `WOOCOMMERCE-PLAN.md` — Konzept für eine spätere WordPress+WooCommerce-Anbindung (aktuell inaktiv, siehe unten)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 
 ## Wichtig: Vor dem Live-Gang zu erledigen
@@ -25,11 +26,13 @@ Statische Website für LHCoding (Kleingewerbe von Nils Wiesmann, seit 2016): Fah
 
 Es handelt sich bewusst **nicht** um einen Online-Shop mit direkter Zahlungsabwicklung — eine statische GitHub-Pages-Seite kann keine Zahlungen selbst verarbeiten. Stattdessen:
 
-1. Kunde wählt eine Leistung in `shop.html` und sendet eine unverbindliche Anfrage über das Formular (öffnet das lokale E-Mail-Programm, es werden keine Daten an einen Server übertragen).
-2. LHCoding bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
-3. Abrechnung erfolgt klassisch per Rechnung/Überweisung.
+1. Kunde sammelt eine oder mehrere Leistungen in `shop.html` über den Warenkorb (Button "In den Warenkorb", unten rechts als Widget sichtbar) — rein clientseitig im `localStorage` des Browsers, keine Serverübertragung.
+2. Über "Zur Anfrage" springt man zum Anfrageformular, der Warenkorb-Inhalt wird automatisch in die Anfrage übernommen.
+3. Beim Absenden öffnet sich das lokale E-Mail-Programm mit einer vorausgefüllten, unverbindlichen Anfrage — es werden keine Daten an einen Server übertragen.
+4. LHCoding bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
+5. Abrechnung erfolgt klassisch per Rechnung/Überweisung.
 
-Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHCoding.
+Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHCoding. Für eine echte Online-Zahlung siehe `WOOCOMMERCE-PLAN.md` (aktuell nicht aktiviert).
 
 ## Lokal ansehen
 
