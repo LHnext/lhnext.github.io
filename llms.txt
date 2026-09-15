@@ -1,0 +1,30 @@
+# LHCoding
+
+> LHCoding ist ein seit 2016 bestehendes Kleingewerbe für Fahrzeug-Codierungen und Diagnosedienstleistungen im Volkswagen-Konzern (VW, Audi, SEAT/CUPRA, Škoda, Bentley, Lamborghini). Leistungen: Steuergeräte-Codierung, SFD-/SFD2-Freischaltung, VCDS-/VCP-/ODIS-gestützte Diagnose sowie VCDS-/VCP-Schulungen.
+
+Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig ist und unter [nirvananils.github.io](https://nirvananils.github.io/) ein persönliches Profil führt.
+
+## Leistungen
+
+- Steuergeräte-Codierung – Anpassung und Konfiguration von Fahrzeugdatensätzen
+- SFD-/SFD2-Freischaltung – geschützter Zugriff auf sensible Steuergeräte über zertifizierte Zugangswege
+- Diagnosedienstleistungen – VCDS-/VCP-/ODIS-gestützte Fehlersuche
+- VCDS-/VCP-Schulungen – für Werkstattteams, vor Ort oder remote
+
+## Seiten
+
+- [Startseite](https://nirvananils.github.io/lhcoding/index.html): Überblick über Leistungen, Ablauf und Kontakt
+- [Leistungen & Preise](https://nirvananils.github.io/lhcoding/shop.html): Leistungsverzeichnis mit Anfrageformular
+- [Impressum](https://nirvananils.github.io/lhcoding/impressum.html): Rechtliche Anbieterkennzeichnung
+- [Datenschutz](https://nirvananils.github.io/lhcoding/datenschutz.html): Datenschutzerklärung
+- [AGB](https://nirvananils.github.io/lhcoding/agb.html): Allgemeine Geschäftsbedingungen
+- [Widerruf](https://nirvananils.github.io/lhcoding/widerruf.html): Widerrufsbelehrung für Verbraucher
+
+## Kontakt
+
+- E-Mail: lhcoding59348@gmail.com
+- Anschrift: Tulpenstiege 5, 59348 Lüdinghausen, Deutschland
+
+## Hinweis
+
+Live-Domain: https://nirvananils.github.io/lhcoding/
