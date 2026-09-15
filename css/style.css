@@ -670,7 +670,7 @@ a { color: var(--accent); text-decoration: none; }
 }
 .legal-page h1 { font-size: 2rem; margin-bottom: 0.6em; }
 .legal-page h2 { font-size: 1.2rem; margin-top: 1.6em; }
-.legal-page .placeholder {
+.placeholder {
   color: var(--accent-2);
   background: var(--accent-soft);
   padding: 2px 8px;
