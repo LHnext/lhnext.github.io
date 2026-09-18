@@ -1,6 +1,8 @@
-# LHCoding — Website
+# LHTech — Website
 
-Statische Website für LHCoding (Kleingewerbe von Nils Wiesmann, seit 2016): Fahrzeug-Codierungen, SFD/SFD2-Freischaltung, Diagnosedienstleistungen und VCDS-/VCP-Schulungen für den Volkswagen-Konzern.
+Statische Website für LHTech (Kleingewerbe von Nils Wiesmann, seit 2016): Diagnose, Reverse Engineering, SFD/SFD2-Freischaltung, Fahrzeug-Codierungen und Schulungen (Schwerpunkt SFD, SFD2, UNECE R155/R156) für den Volkswagen-Konzern.
+
+> Hinweis: Der Markenname ist LHTech; die GitHub-Organisation und Domain heißen aus historischen Gründen technisch weiterhin `lhcoding59348` (siehe unten).
 
 ## Struktur
 
@@ -33,10 +35,10 @@ Es handelt sich bewusst **nicht** um einen Online-Shop mit direkter Zahlungsabwi
 1. Kunde sammelt eine oder mehrere Leistungen in `shop.html` über den Warenkorb (Button "In den Warenkorb", unten rechts als Widget sichtbar) — rein clientseitig im `localStorage` des Browsers, keine Serverübertragung.
 2. Über "Zur Anfrage" springt man zum Anfrageformular, der Warenkorb-Inhalt wird automatisch in die Anfrage übernommen.
 3. Beim Absenden öffnet sich das lokale E-Mail-Programm mit einer vorausgefüllten, unverbindlichen Anfrage — es werden keine Daten an einen Server übertragen.
-4. LHCoding bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
+4. LHTech bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
 5. Abrechnung erfolgt klassisch per Rechnung/Überweisung.
 
-Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHCoding. Für eine echte Online-Zahlung siehe `WOOCOMMERCE-PLAN.md` (aktuell nicht aktiviert).
+Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHTech. Für eine echte Online-Zahlung siehe `WOOCOMMERCE-PLAN.md` (aktuell nicht aktiviert).
 
 ## Lokal ansehen
 
@@ -48,7 +50,7 @@ npx serve .
 
 ## Veröffentlichen mit GitHub Pages
 
-Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHCoding — automatisch mit dorthin umgeleitet. Deshalb läuft LHCoding über eine eigene, kostenlose GitHub-Organisation:
+Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHTech — automatisch mit dorthin umgeleitet. Deshalb läuft LHTech über eine eigene, kostenlose GitHub-Organisation (technischer Name weiterhin `lhcoding59348`, unabhängig vom aktuellen Markennamen LHTech):
 
 1. Organisation `lhcoding59348` auf GitHub angelegt.
 2. Darin ein Repository angelegt, das exakt `lhcoding59348.github.io` heißt (nur dieser exakte Name ergibt eine eigene `*.github.io`-Domain).
