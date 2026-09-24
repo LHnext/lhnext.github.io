@@ -6,10 +6,10 @@ Stand: 2026-09-24. Diese Datei sammelt die nächsten Schritte für LHTech (techn
 
 - [ ] Neue GitHub-Organisation `lhnext` anlegen
 - [ ] Darin Repository `lhnext.github.io` anlegen (exakter Name nötig für eigene `*.github.io`-Domain)
-- [ ] Lokales Remote ist bereits auf `https://github.com/lhnext/lhnext.github.io.git` gesetzt — nach Repo-Anlage: `git push -u origin main`
+- [x] Lokales Remote ist bereits auf `https://github.com/lhnext/lhnext.github.io.git` gesetzt — nach Repo-Anlage: `git push -u origin main`
 - [ ] GitHub Pages prüfen: Settings → Pages → Source = `main` / `/ (root)`
 - [ ] Alte Organisation/Domain `lhcoding59348.github.io` nach erfolgreichem Umzug stilllegen oder als Weiterleitungshinweis stehen lassen
-- [ ] Lokalen Projektordner von `Website_LHTech` auf `Website_LHnext` umbenennen (nach Repo-Umzug, siehe Hinweis unten)
+- [x] Lokalen Projektordner von `Website_LHTech` auf `Website_LHnext` umbenennen (nach Repo-Umzug, siehe Hinweis unten)
 - [ ] Prüfen, ob Kontakt-E-Mail `lhcoding59348@gmail.com` langfristig auf eine `lhnext`- oder `lhtech`-Adresse umgestellt werden soll (aktuell bewusst unverändert, da echter Account)
 
 ## 2. Vor Live-Gang (bestehende offene Punkte)
