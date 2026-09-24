@@ -2,7 +2,7 @@
 
 Statische Website für LHTech (Kleingewerbe von Nils Wiesmann, seit 2016): Diagnose, Reverse Engineering, SFD/SFD2-Freischaltung, Fahrzeug-Codierungen und Schulungen (Schwerpunkt SFD, SFD2, UNECE R155/R156) für den Volkswagen-Konzern.
 
-> Hinweis: Der Markenname ist LHTech; die GitHub-Organisation und Domain heißen aus historischen Gründen technisch weiterhin `lhcoding59348` (siehe unten).
+> Hinweis: Der Markenname ist LHTech; die GitHub-Organisation und Domain heißen technisch `lhnext` (vormals `lhcoding59348`, siehe unten).
 
 ## Struktur
 
@@ -17,7 +17,7 @@ Statische Website für LHTech (Kleingewerbe von Nils Wiesmann, seit 2016): Diagn
 - `agb.html` — Allgemeine Geschäftsbedingungen (Muster-Entwurf, siehe Hinweis unten)
 - `widerruf.html` — Widerrufsbelehrung + Muster-Widerrufsformular (Muster-Entwurf, siehe Hinweis unten)
 - `css/style.css`, `js/script.js` — Styles (inkl. Light/Dark-Mode-Umschalter, per Klick änderbar und in `localStorage` gemerkt), E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
-- `WOOCOMMERCE-PLAN.md` — Konzept für eine spätere WordPress+WooCommerce-Anbindung (aktuell inaktiv, siehe unten)
+- `woocommerce/` — separates Projekt für eine spätere WordPress+WooCommerce-Anbindung (eigener Ordner, aktuell inaktiv/nicht verlinkt, siehe unten)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 
 ## Wichtig: Vor dem Live-Gang zu erledigen
@@ -38,7 +38,7 @@ Es handelt sich bewusst **nicht** um einen Online-Shop mit direkter Zahlungsabwi
 4. LHTech bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
 5. Abrechnung erfolgt klassisch per Rechnung/Überweisung.
 
-Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHTech. Für eine echte Online-Zahlung siehe `WOOCOMMERCE-PLAN.md` (aktuell nicht aktiviert).
+Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHTech. Für eine echte Online-Zahlung siehe `woocommerce/README.md` (aktuell nicht aktiviert).
 
 ## Lokal ansehen
 
@@ -50,16 +50,16 @@ npx serve .
 
 ## Veröffentlichen mit GitHub Pages
 
-Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHTech — automatisch mit dorthin umgeleitet. Deshalb läuft LHTech über eine eigene, kostenlose GitHub-Organisation (technischer Name weiterhin `lhcoding59348`, unabhängig vom aktuellen Markennamen LHTech):
+Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHTech — automatisch mit dorthin umgeleitet. Deshalb läuft LHTech über eine eigene, kostenlose GitHub-Organisation (technischer Name `lhnext`, unabhängig vom aktuellen Markennamen LHTech; vormals `lhcoding59348`):
 
-1. Organisation `lhcoding59348` auf GitHub angelegt.
-2. Darin ein Repository angelegt, das exakt `lhcoding59348.github.io` heißt (nur dieser exakte Name ergibt eine eigene `*.github.io`-Domain).
+1. Organisation `lhnext` auf GitHub angelegt.
+2. Darin ein Repository angelegt, das exakt `lhnext.github.io` heißt (nur dieser exakte Name ergibt eine eigene `*.github.io`-Domain).
 3. Lokales Repo darauf verbunden:
 
    ```
-   git remote add origin https://github.com/lhcoding59348/lhcoding59348.github.io.git
+   git remote add origin https://github.com/lhnext/lhnext.github.io.git
    git push -u origin main
    ```
 
 4. Für Repos mit dem Namensmuster `<name>.github.io` aktiviert GitHub Pages sich in der Regel automatisch; falls nicht, unter **Settings → Pages → Build and deployment → Source: Deploy from a branch**, Branch `main`, Ordner `/ (root)` einstellen.
-5. Die Seite ist unter `https://lhcoding59348.github.io/` erreichbar — unabhängig von `nirvananils.github.io`/`nilswiesmann.net`.
+5. Die Seite ist unter `https://lhnext.github.io/` erreichbar — unabhängig von `nirvananils.github.io`/`nilswiesmann.net`.

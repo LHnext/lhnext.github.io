@@ -13,15 +13,15 @@ Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig is
 
 ## Seiten
 
-- [Startseite](https://lhcoding59348.github.io/index.html): Überblick über Leistungen, Ablauf und Kontakt
-- [Über uns](https://lhcoding59348.github.io/ueber-uns.html): Wer hinter LHTech steht, Abgrenzung zu Auto-Intern/vcds.de
-- [Werkzeuge](https://lhcoding59348.github.io/werkzeuge.html): VCDS, VCP und Reverse Engineering im Detail (weitere Werkzeuge folgen)
-- [Leistungen & Preise](https://lhcoding59348.github.io/shop.html): Leistungsverzeichnis mit Warenkorb und Anfrageformular
-- [Portfolio](https://lhcoding59348.github.io/portfolio.html): Beispielhafte Projektarten
-- [Impressum](https://lhcoding59348.github.io/impressum.html): Rechtliche Anbieterkennzeichnung
-- [Datenschutz](https://lhcoding59348.github.io/datenschutz.html): Datenschutzerklärung
-- [AGB](https://lhcoding59348.github.io/agb.html): Allgemeine Geschäftsbedingungen
-- [Widerruf](https://lhcoding59348.github.io/widerruf.html): Widerrufsbelehrung für Verbraucher
+- [Startseite](https://lhnext.github.io/index.html): Überblick über Leistungen, Ablauf und Kontakt
+- [Über uns](https://lhnext.github.io/ueber-uns.html): Wer hinter LHTech steht, Abgrenzung zu Auto-Intern/vcds.de
+- [Werkzeuge](https://lhnext.github.io/werkzeuge.html): VCDS, VCP und Reverse Engineering im Detail (weitere Werkzeuge folgen)
+- [Leistungen & Preise](https://lhnext.github.io/shop.html): Leistungsverzeichnis mit Warenkorb und Anfrageformular
+- [Portfolio](https://lhnext.github.io/portfolio.html): Beispielhafte Projektarten
+- [Impressum](https://lhnext.github.io/impressum.html): Rechtliche Anbieterkennzeichnung
+- [Datenschutz](https://lhnext.github.io/datenschutz.html): Datenschutzerklärung
+- [AGB](https://lhnext.github.io/agb.html): Allgemeine Geschäftsbedingungen
+- [Widerruf](https://lhnext.github.io/widerruf.html): Widerrufsbelehrung für Verbraucher
 
 ## Kontakt
 
@@ -30,4 +30,4 @@ Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig is
 
 ## Hinweis
 
-Live-Domain: https://lhcoding59348.github.io/
+Live-Domain: https://lhnext.github.io/

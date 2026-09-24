@@ -1,6 +1,6 @@
 # Geplante Erweiterung: WordPress + WooCommerce
 
-**Status: inaktiv / nur Planung.** Es ist aktuell nichts von diesem Plan live oder eingebunden. Die Website läuft weiterhin komplett statisch über GitHub Pages mit dem Anfrage-Warenkorb in `shop.html`.
+**Status: inaktiv / nur Planung.** Eigenständiges Projekt in diesem Unterordner, getrennt vom Hauptrepo — nicht verlinkt, nicht deployt, nicht im Live-Menü. Es ist aktuell nichts von diesem Plan live oder eingebunden. Die Website läuft weiterhin komplett statisch über GitHub Pages mit dem Anfrage-Warenkorb in `shop.html`.
 
 ## Warum das nicht "einfach dazu geschaltet" werden kann
 
