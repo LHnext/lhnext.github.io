@@ -20,4 +20,5 @@ Stand: 2026-09-24. Diese Datei sammelt die nächsten Schritte für LH.next (tech
 
 - [ ] Werkzeuge-Seite um weitere Systeme ergänzen (aktuell nur VCDS/VCP, ODIS als Platzhalter)
 - [ ] Portfolio mit echten Beispielprojekten füllen
+- [ ] Anfrageformular (`shop.html`) auf Formular-Dienst umstellen (z. B. Web3Forms oder Formspree) statt `mailto:` — zuverlässiger Versand ohne E-Mail-Programm beim Kunden, Bestätigung „Anfrage gesendet“
 - [ ] Entscheidung: eigene Domain (z. B. `lhnext.de`) statt `*.github.io`, DNS-Konfiguration falls ja
