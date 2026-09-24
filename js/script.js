@@ -1,5 +1,5 @@
 /* Theme (Dark/Light) */
-const THEME_KEY = "lhtech_theme";
+const THEME_KEY = "lhnext_theme";
 const themeToggle = document.getElementById("themeToggle");
 
 function applyTheme(theme) {
@@ -140,7 +140,7 @@ if (requestForm) {
 }
 
 /* Warenkorb (rein clientseitig, keine Server-/Zahlungsanbindung) */
-const CART_KEY = "lhtech_cart";
+const CART_KEY = "lhnext_cart";
 
 function getCart() {
   try {

@@ -1,6 +1,6 @@
-# LHTech
+# LH.next
 
-> LHTech ist ein seit 2016 bestehendes Kleingewerbe für Fahrzeugdiagnose, Reverse Engineering und Codierung im Volkswagen-Konzern (VW, Audi, SEAT/CUPRA, Škoda, Bentley, Lamborghini). Leistungen: Diagnose (VCDS/VCP/ODIS), Reverse-Engineering-Analyse, Steuergeräte-Codierung, SFD-/SFD2-Freischaltung sowie Schulungen — aktueller Schwerpunkt SFD, SFD2 und UNECE R155/R156.
+> LH.next ist ein seit 2016 bestehendes Kleingewerbe für Fahrzeugdiagnose, Reverse Engineering und Codierung im Volkswagen-Konzern (VW, Audi, SEAT/CUPRA, Škoda, Bentley, Lamborghini). Leistungen: Diagnose (VCDS/VCP/ODIS), Reverse-Engineering-Analyse, Steuergeräte-Codierung, SFD-/SFD2-Freischaltung sowie Schulungen — aktueller Schwerpunkt SFD, SFD2 und UNECE R155/R156.
 
 Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig ist und unter [nirvananils.github.io](https://nirvananils.github.io/) ein persönliches Profil führt.
 
@@ -14,7 +14,7 @@ Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig is
 ## Seiten
 
 - [Startseite](https://lhnext.github.io/index.html): Überblick über Leistungen, Ablauf und Kontakt
-- [Über uns](https://lhnext.github.io/ueber-uns.html): Wer hinter LHTech steht, Abgrenzung zu Auto-Intern/vcds.de
+- [Über uns](https://lhnext.github.io/ueber-uns.html): Wer hinter LH.next steht, Abgrenzung zu Auto-Intern/vcds.de
 - [Werkzeuge](https://lhnext.github.io/werkzeuge.html): VCDS, VCP und Reverse Engineering im Detail (weitere Werkzeuge folgen)
 - [Leistungen & Preise](https://lhnext.github.io/shop.html): Leistungsverzeichnis mit Warenkorb und Anfrageformular
 - [Portfolio](https://lhnext.github.io/portfolio.html): Beispielhafte Projektarten

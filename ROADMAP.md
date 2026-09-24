@@ -1,6 +1,6 @@
 # Roadmap — nächste Schritte
 
-Stand: 2026-09-24. Diese Datei sammelt die nächsten Schritte für LHTech (technischer Name `lhnext`).
+Stand: 2026-09-24. Diese Datei sammelt die nächsten Schritte für LH.next (technischer Name `lhnext`).
 
 ## 1. Vor Live-Gang (bestehende offene Punkte)
 
@@ -20,4 +20,4 @@ Stand: 2026-09-24. Diese Datei sammelt die nächsten Schritte für LHTech (techn
 
 - [ ] Werkzeuge-Seite um weitere Systeme ergänzen (aktuell nur VCDS/VCP, ODIS als Platzhalter)
 - [ ] Portfolio mit echten Beispielprojekten füllen
-- [ ] Entscheidung: eigene Domain (z. B. `lhtech.de`) statt `*.github.io`, DNS-Konfiguration falls ja
+- [ ] Entscheidung: eigene Domain (z. B. `lhnext.de`) statt `*.github.io`, DNS-Konfiguration falls ja

@@ -1,8 +1,8 @@
-# LHTech — Website
+# LH.next — Website
 
-Statische Website für LHTech (Kleingewerbe von Nils Wiesmann, seit 2016): Diagnose, Reverse Engineering, SFD/SFD2-Freischaltung, Fahrzeug-Codierungen und Schulungen (Schwerpunkt SFD, SFD2, UNECE R155/R156) für den Volkswagen-Konzern.
+Statische Website für LH.next (Kleingewerbe von Nils Wiesmann, seit 2016): Diagnose, Reverse Engineering, SFD/SFD2-Freischaltung, Fahrzeug-Codierungen und Schulungen (Schwerpunkt SFD, SFD2, UNECE R155/R156) für den Volkswagen-Konzern.
 
-> Hinweis: Der Markenname ist LHTech; die GitHub-Organisation und Domain heißen technisch `lhnext`.
+> Hinweis: Der Markenname ist LH.next; die GitHub-Organisation und Domain heißen technisch `lhnext`.
 
 ## Struktur
 
@@ -35,10 +35,10 @@ Es handelt sich bewusst **nicht** um einen Online-Shop mit direkter Zahlungsabwi
 1. Kunde sammelt eine oder mehrere Leistungen in `shop.html` über den Warenkorb (Button "In den Warenkorb", unten rechts als Widget sichtbar) — rein clientseitig im `localStorage` des Browsers, keine Serverübertragung.
 2. Über "Zur Anfrage" springt man zum Anfrageformular, der Warenkorb-Inhalt wird automatisch in die Anfrage übernommen.
 3. Beim Absenden öffnet sich das lokale E-Mail-Programm mit einer vorausgefüllten, unverbindlichen Anfrage — es werden keine Daten an einen Server übertragen.
-4. LHTech bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
+4. LH.next bestätigt Auftrag, Preis und Termin manuell per E-Mail — erst hier kommt der Vertrag zustande (siehe `agb.html`, § 2).
 5. Abrechnung erfolgt klassisch per Rechnung/Überweisung.
 
-Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LHTech. Für eine echte Online-Zahlung siehe `woocommerce/README.md` (aktuell nicht aktiviert).
+Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LH.next. Für eine echte Online-Zahlung siehe `woocommerce/README.md` (aktuell nicht aktiviert).
 
 ## Lokal ansehen
 
@@ -50,7 +50,7 @@ npx serve .
 
 ## Veröffentlichen mit GitHub Pages
 
-Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHTech — automatisch mit dorthin umgeleitet. Deshalb läuft LHTech über eine eigene, kostenlose GitHub-Organisation (technischer Name `lhnext`):
+Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LH.next — automatisch mit dorthin umgeleitet. Deshalb läuft LH.next über eine eigene, kostenlose GitHub-Organisation (technischer Name `lhnext`):
 
 1. Organisation `lhnext` auf GitHub angelegt.
 2. Darin ein Repository angelegt, das exakt `lhnext.github.io` heißt (nur dieser exakte Name ergibt eine eigene `*.github.io`-Domain).
