@@ -2,7 +2,7 @@
 
 Statische Website für LHTech (Kleingewerbe von Nils Wiesmann, seit 2016): Diagnose, Reverse Engineering, SFD/SFD2-Freischaltung, Fahrzeug-Codierungen und Schulungen (Schwerpunkt SFD, SFD2, UNECE R155/R156) für den Volkswagen-Konzern.
 
-> Hinweis: Der Markenname ist LHTech; die GitHub-Organisation und Domain heißen technisch `lhnext` (vormals `lhcoding59348`, siehe unten).
+> Hinweis: Der Markenname ist LHTech; die GitHub-Organisation und Domain heißen technisch `lhnext`.
 
 ## Struktur
 
@@ -50,7 +50,7 @@ npx serve .
 
 ## Veröffentlichen mit GitHub Pages
 
-Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHTech — automatisch mit dorthin umgeleitet. Deshalb läuft LHTech über eine eigene, kostenlose GitHub-Organisation (technischer Name `lhnext`, unabhängig vom aktuellen Markennamen LHTech; vormals `lhcoding59348`):
+Da für den persönlichen Account `nirvananils.github.io` eine Custom Domain (`nilswiesmann.net`) hinterlegt ist, würde jede Unterseite unter `nirvananils.github.io/*` — auch die von LHTech — automatisch mit dorthin umgeleitet. Deshalb läuft LHTech über eine eigene, kostenlose GitHub-Organisation (technischer Name `lhnext`):
 
 1. Organisation `lhnext` auf GitHub angelegt.
 2. Darin ein Repository angelegt, das exakt `lhnext.github.io` heißt (nur dieser exakte Name ergibt eine eigene `*.github.io`-Domain).
