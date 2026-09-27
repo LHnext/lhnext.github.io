@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Abstrakte Illustration: Diagnosestecker und Datenverbindung zu Steuergeräten</title>
+  <g fill="none" stroke="#ff5566" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+    <rect x="40" y="90" width="70" height="40" rx="6"/>
+    <path d="M75 90 V70 M60 70 h30" />
+    <path d="M110 110 H 220" />
+    <circle cx="240" cy="110" r="20" />
+    <path d="M260 110 H 340" stroke-dasharray="4 6"/>
+    <rect x="340" y="70" width="80" height="80" rx="10" />
+    <path d="M360 90 h40 M360 105 h40 M360 120 h25" />
+    <path d="M420 110 H 470" stroke-dasharray="4 6"/>
+    <rect x="470" y="85" width="60" height="50" rx="8" />
+    <path d="M420 90 V 40 H 560" />
+    <circle cx="560" cy="40" r="16" />
+    <path d="M420 130 V 170 H 560" />
+    <circle cx="560" cy="170" r="16" />
+  </g>
+  <g fill="#ffb454" opacity="0.85">
+    <circle cx="240" cy="110" r="4"/>
+    <circle cx="560" cy="40" r="4"/>
+    <circle cx="560" cy="170" r="4"/>
+  </g>
+</svg>

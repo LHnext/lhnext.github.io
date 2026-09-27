@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="portfolioTitle">
+  <title id="portfolioTitle">Abstrakte Illustration: mehrere verbundene Fahrzeug-Steuergeräte</title>
+  <g fill="none" stroke="#ff5566" stroke-width="2.5" stroke-linecap="round" opacity="0.9">
+    <rect x="30" y="70" width="60" height="45" rx="8"/>
+    <rect x="150" y="40" width="60" height="45" rx="8"/>
+    <rect x="270" y="90" width="60" height="45" rx="8"/>
+    <rect x="390" y="45" width="60" height="45" rx="8"/>
+    <rect x="510" y="80" width="60" height="45" rx="8"/>
+    <path d="M90 92 H150" stroke-dasharray="4 6"/>
+    <path d="M210 62 H270 V112" stroke-dasharray="4 6"/>
+    <path d="M330 112 H390" stroke-dasharray="4 6"/>
+    <path d="M450 67 H510" stroke-dasharray="4 6"/>
+  </g>
+  <g fill="#ffb454" opacity="0.85">
+    <circle cx="60" cy="92" r="4"/>
+    <circle cx="180" cy="62" r="4"/>
+    <circle cx="300" cy="112" r="4"/>
+    <circle cx="420" cy="67" r="4"/>
+    <circle cx="540" cy="102" r="4"/>
+  </g>
+</svg>

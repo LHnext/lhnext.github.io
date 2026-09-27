@@ -18,7 +18,6 @@ Statische Website für LH.next (Kleingewerbe von Nils Wiesmann, seit 2016): Diag
 - `widerruf.html` — Widerrufsbelehrung + Muster-Widerrufsformular (Muster-Entwurf, siehe Hinweis unten)
 - `css/style.css`, `js/script.js` — Styles (inkl. Light/Dark-Mode-Umschalter, per Klick änderbar und in `localStorage` gemerkt), E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
 - `woocommerce/` — separates Projekt für eine spätere WordPress+WooCommerce-Anbindung (eigener Ordner, aktuell inaktiv/nicht verlinkt, siehe unten)
-- `p/`, `tools/private/` — verschlüsselter privater Bereich und dessen Build-Werkzeug (siehe unten); Quellen in `sites/` sind nicht im Repo
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
 
 ## Wichtig: Vor dem Live-Gang zu erledigen
@@ -40,21 +39,6 @@ Es handelt sich bewusst **nicht** um einen Online-Shop mit direkter Zahlungsabwi
 5. Abrechnung erfolgt klassisch per Rechnung/Überweisung.
 
 Das ist rechtlich einfacher und günstiger als ein echtes Zahlungs-Backend, erfordert aber manuelle Auftragsbestätigung durch LH.next. Für eine echte Online-Zahlung siehe `woocommerce/README.md` (aktuell nicht aktiviert).
-
-## Privater Bereich (`p/`)
-
-Nicht verlinkter, passwortgeschützter Bereich für eigene Analyse-Werkzeuge. Da GitHub Pages rein statisch ist und das Repository öffentlich ist, schützt kein Server die Seiten, sondern Verschlüsselung:
-
-- Quellseiten liegen in `sites/` (`sites/<name>.html` oder `sites/<name>/index.html`). Der Ordner steht in `.gitignore` und wird **nie** committet.
-- `node tools/private/build.mjs` fragt das Passwort ab, bettet lokale CSS-, JS- und Bilddateien ein und schreibt pro Seite eine AES-256-GCM-verschlüsselte Datei nach `p/<name>.html` sowie eine verschlüsselte Übersicht `p/index.html`. Schlüsselableitung: PBKDF2-SHA-256, 600.000 Iterationen, Salt in `tools/private/config.json`.
-- Im Browser wird nach Passworteingabe lokal entschlüsselt. Optional „Auf diesem Gerät merken“ (Schlüssel im `localStorage`), sonst nur für die Browser-Sitzung. „Sperren“ löscht den gespeicherten Schlüssel.
-- Das Passwort muss bei jedem Build gleich sein; ein abweichendes Passwort bricht ab. Wechsel mit `--new-password`. Alte Versionen bleiben in der Git-Historie mit dem alten Passwort lesbar.
-- Seiten dürfen keine weiteren Dateien zur Laufzeit nachladen (`fetch('daten.json')` o. Ä.), da diese sonst unverschlüsselt veröffentlicht werden müssten.
-
-**Teilen:** Jede private Seite erhält unten rechts „Ergebnis teilen“. Erzeugt wird eine statische Momentaufnahme des aktuellen Zustands ohne Skripte und ohne Event-Handler; Eingabefelder werden eingefroren, Canvas-Grafiken als Bild übernommen. Der Link zeigt auf `p/v.html`, die Momentaufnahme steckt komprimiert im `#`-Teil der URL (wird nicht an den Server übertragen) und wird in einem sandboxed `iframe` ohne Skriptausführung angezeigt. Alternativ lässt sie sich als HTML-Datei herunterladen. Steuerung in den Quellseiten:
-
-- `data-share-root` — nur diese Elemente teilen (z. B. den Ergebnisbereich)
-- `data-share-exclude` — Element nie teilen (z. B. Eingabemaske, eingebettete Referenzdaten)
 
 ## Lokal ansehen
 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Geschützter Bereich</title>
+<style>
+  :root { --bg:#0b0f14; --surface:#131a23; --border:#223041; --text:#e7edf3; --dim:#9fb0c1; --accent:#ff5566; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f7f8fa; --surface:#fff; --border:#dde1e8; --text:#14181f; --dim:#454f5c; --accent:#d9364a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; min-height:100vh; display:grid; place-items:center; padding:16px;
+         background:var(--bg); color:var(--text);
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+  form { width:100%; max-width:340px; background:var(--surface); border:1px solid var(--border);
+         border-radius:14px; padding:24px; display:grid; gap:12px; }
+  h1 { font-size:1.1rem; margin:0; }
+  input[type=password] { width:100%; padding:10px 12px; border-radius:8px; border:1px solid var(--border);
+         background:var(--bg); color:var(--text); font:inherit; }
+  label { font-size:.9rem; color:var(--dim); display:flex; gap:8px; align-items:center; }
+  button { padding:10px; border:0; border-radius:8px; background:var(--accent); color:#fff; font:inherit; font-weight:600; cursor:pointer; }
+  button:disabled { opacity:.6; cursor:wait; }
+  #err { color:var(--accent); font-size:.9rem; min-height:1.2em; margin:0; }
+</style>
+</head>
+<body>
+<form id="f" hidden>
+  <h1>Geschützter Bereich</h1>
+  <input type="password" id="pw" autocomplete="current-password" placeholder="Passwort" required autofocus>
+  <label><input type="checkbox" id="remember"> Auf diesem Gerät merken</label>
+  <button id="go">Entsperren</button>
+  <p id="err" role="alert"></p>
+</form>
+<script type="application/json" id="payload">__PAYLOAD__</script>
+<script>
+(() => {
+  const P = JSON.parse(document.getElementById('payload').textContent);
+  const STORE = 'lhp-key-' + P.salt;
+  const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+  const toB64 = u => btoa(String.fromCharCode(...u));
+
+  function stored() {
+    try { return sessionStorage.getItem(STORE) || localStorage.getItem(STORE); } catch { return null; }
+  }
+  function store(raw, persist) {
+    try {
+      sessionStorage.setItem(STORE, raw);
+      if (persist) localStorage.setItem(STORE, raw);
+    } catch {}
+  }
+  function forget() {
+    try { sessionStorage.removeItem(STORE); localStorage.removeItem(STORE); } catch {}
+  }
+
+  async function deriveRaw(password) {
+    const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(password), 'PBKDF2', false, ['deriveBits']);
+    const bits = await crypto.subtle.deriveBits(
+      { name: 'PBKDF2', hash: 'SHA-256', salt: b64(P.salt), iterations: P.iter }, base, 256);
+    return new Uint8Array(bits);
+  }
+
+  async function decrypt(raw) {
+    const key = await crypto.subtle.importKey('raw', raw, 'AES-GCM', false, ['decrypt']);
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(P.iv) }, key, b64(P.ct));
+    const stream = new Blob([plain]).stream().pipeThrough(new DecompressionStream('deflate-raw'));
+    return new Response(stream).text();
+  }
+
+  function show(html) {
+    document.open();
+    document.write(html);
+    document.close();
+  }
+
+  const form = document.getElementById('f');
+  const err = document.getElementById('err');
+  const btn = document.getElementById('go');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    btn.disabled = true;
+    err.textContent = '';
+    try {
+      const raw = await deriveRaw(document.getElementById('pw').value);
+      const html = await decrypt(raw);
+      store(toB64(raw), document.getElementById('remember').checked);
+      show(html);
+    } catch (x) {
+      err.textContent = x.name === 'OperationError' ? 'Falsches Passwort.' : 'Fehler beim Öffnen: ' + x.message;
+      btn.disabled = false;
+    }
+  });
+
+  const saved = stored();
+  if (saved) {
+    decrypt(b64(saved)).then(show,() => { forget(); form.hidden = false; });
+  } else {
+    form.hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
