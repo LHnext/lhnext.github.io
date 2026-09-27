@@ -138,9 +138,14 @@
     const head = clone.querySelector('head');
     const body = clone.querySelector('body');
 
-    // Optional nur markierte Bereiche teilen.
-    const roots = body.querySelectorAll('[data-share-root]');
-    if (roots.length) body.replaceChildren(...roots);
+    // Optional nur markierte Bereiche teilen; umgebende Layout-Container bleiben erhalten.
+    const roots = [...body.querySelectorAll('[data-share-root]')];
+    if (roots.length) {
+      const keep = el => roots.some(r => r === el || r.contains(el) || el.contains(r));
+      for (const el of [...body.querySelectorAll('*')]) {
+        if (el.isConnected && !keep(el)) el.remove();
+      }
+    }
 
     clone.querySelectorAll('script, noscript, template, iframe, object, embed, frame, frameset, base, ' +
       'meta[http-equiv], meta[charset], meta[name=viewport], meta[name=robots], link, style, [data-share-exclude]').forEach(el => el.remove());
