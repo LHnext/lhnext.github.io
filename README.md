@@ -19,6 +19,8 @@ Statische Website für LH.next (Kleingewerbe von Nils Wiesmann, seit 2016): Diag
 - `css/style.css`, `js/script.js` — Styles (inkl. Light/Dark-Mode-Umschalter, per Klick änderbar und in `localStorage` gemerkt), E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
 - `woocommerce/` — separates Projekt für eine spätere WordPress+WooCommerce-Anbindung (eigener Ordner, aktuell inaktiv/nicht verlinkt, siehe unten)
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages
+- `p/` — nicht verlinkter, passwortgeschützter Bereich für interne Werkzeuge mit „Ergebnis teilen“ (generiert, siehe `tools/private/README.md`)
+- `tools/private/` — Build-Skript und Vorlagen für `p/`; Klartext-Quellen liegen in `sites/` (per `.gitignore` ausgeschlossen)
 
 ## Wichtig: Vor dem Live-Gang zu erledigen
 
