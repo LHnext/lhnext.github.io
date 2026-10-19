@@ -17,6 +17,7 @@ Statische Website für LH.next (Kleingewerbe von Nils Wiesmann, seit 2016): Diag
 - `agb.html` — Allgemeine Geschäftsbedingungen (Muster-Entwurf, siehe Hinweis unten)
 - `widerruf.html` — Widerrufsbelehrung + Muster-Widerrufsformular (Muster-Entwurf, siehe Hinweis unten)
 - `css/style.css`, `js/script.js` — Styles (inkl. Light/Dark-Mode-Umschalter, per Klick änderbar und in `localStorage` gemerkt), E-Mail-Verschleierung, Warenkorb- und Anfrageformular-Logik
+- `js/consent.js` — Cookie-Banner und Google Analytics 4. GA wird erst nach Klick auf „Akzeptieren“ geladen; Entscheidung im `localStorage` (`lhnext_consent`, 12 Monate gültig), änderbar über den automatisch im Footer eingefügten Link „Cookie-Einstellungen“. Mess-ID steht in `GA_MEASUREMENT_ID` (aktuell `G-7SW473HGED`); mit dem Platzhalter `G-XXXXXXXXXX` bleiben Banner und Tracking aus.
 - `woocommerce/` — separates Projekt für eine spätere WordPress+WooCommerce-Anbindung (eigener Ordner, aktuell inaktiv/nicht verlinkt, siehe unten)
 - `p/`, `tools/private/` — verschlüsselter privater Bereich und dessen Build-Werkzeug (siehe unten); Quellen in `sites/` sind nicht im Repo
 - `.nojekyll` — deaktiviert die Jekyll-Verarbeitung auf GitHub Pages

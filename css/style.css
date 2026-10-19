@@ -709,3 +709,42 @@ a { color: var(--accent); text-decoration: none; }
   .nav-toggle { display: flex; }
   .nav-cta { align-self: flex-start; }
 }
+
+/* Cookie-Einwilligung */
+.consent-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 100;
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+  padding: 20px 22px;
+}
+.consent-banner[hidden] { display: none; }
+.consent-text {
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+}
+.consent-text strong { color: var(--text); }
+.consent-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.consent-actions .btn {
+  cursor: pointer;
+  font-family: inherit;
+  background-color: transparent;
+}
+.consent-actions .btn-primary { background: var(--accent); border: 1px solid var(--accent); }
+.consent-actions .btn-primary:hover { background: var(--accent-2); border-color: var(--accent-2); }
+
+@media (max-width: 560px) {
+  .consent-actions .btn { flex: 1 1 0; text-align: center; }
+}
