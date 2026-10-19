@@ -24,7 +24,7 @@ Statische Website für LH.next (Kleingewerbe von Nils Wiesmann, seit 2016): Diag
 
 ## Wichtig: Vor dem Live-Gang zu erledigen
 
-1. **Preise eintragen:** In `shop.html` alle `[PREIS ERGÄNZEN]`-Platzhalter durch echte Preise ersetzen.
+1. **Preise:** In `shop.html` stehen aktuell alle Leistungen auf „Preis auf Anfrage“ bzw. „Nach Absprache“ — bei Bedarf durch feste Preise ersetzen.
 2. **AGB & Widerrufsbelehrung prüfen lassen:** `agb.html` und `widerruf.html` sind Muster-Entwürfe auf Basis gängiger Standardklauseln bzw. des gesetzlichen Musters. Sie **ersetzen keine individuelle Rechtsberatung** — vor Verwendung von einem Rechtsanwalt oder Steuerberater prüfen lassen, insbesondere:
    - Haftungsklauseln und Zahlungsfristen in der AGB
    - Fristbeginn und vorzeitiges Erlöschen des Widerrufsrechts in der Widerrufsbelehrung
