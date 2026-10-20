@@ -417,6 +417,17 @@ a { color: var(--accent); text-decoration: none; }
 .portfolio-card-body { padding: 22px; }
 .portfolio-card-body h3 { margin-bottom: 6px; }
 .portfolio-card-body p { font-size: 0.92rem; margin-bottom: 0; }
+.portfolio-links {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--surface-border);
+  display: grid;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+.portfolio-links a::before { content: "→ "; }
+.portfolio-links a:hover { text-decoration: underline; }
 
 /* Tool detail blocks */
 .tool-detail {
