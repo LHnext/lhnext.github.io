@@ -10,6 +10,7 @@ Statische Website für LH.next (Kleingewerbe von Nils Wiesmann, seit 2016): Diag
 - `ueber-uns.html` — Über uns (Firmengeschichte, klare Abgrenzung zu Auto-Intern/vcds.de)
 - `werkzeuge.html` — Werkzeuge & Systeme (VCDS, VCP, ODIS, SFD/SFD2 im Detail)
 - `portfolio.html` — Beispielhafte Projektarten
+- `blog.html` — Blog-Übersicht; Beiträge als `blog-<slug>.html` im Stammordner (nicht in Unterordnern, da Navigation und `js/consent.js` relative Pfade nutzen). Neuer Beitrag: Datei anlegen und Karte in `blog.html` oben ergänzen
 - `shop.html` — Leistungsverzeichnis mit Preisen, Warenkorb und Anfrageformular (mailto-basiert, kein Server/Zahlungsanbieter nötig)
 - `img/*.svg` — eigene, abstrakte Illustrationen (keine Fotos)
 - `impressum.html` — Impressum
