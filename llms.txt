@@ -18,7 +18,7 @@ Betreiber ist Nils Wiesmann, der zusätzlich bei Auto-Intern (vcds.de) tätig is
 - [Werkzeuge](https://lhnext.github.io/werkzeuge.html): VCDS, VCP und Reverse Engineering im Detail (weitere Werkzeuge folgen)
 - [Leistungen & Preise](https://lhnext.github.io/shop.html): Leistungsverzeichnis mit Warenkorb und Anfrageformular
 - [Portfolio](https://lhnext.github.io/portfolio.html): Beispielhafte Projektarten
-- [Blog](https://lhnext.github.io/blog.html): Fachbeiträge, z. B. Unlock Region bei Audi MLBevo (A4, A5, Q5, Q7) mit Kostal-Vorfeldkamera
+- [Blog](https://lhnext.github.io/blog.html): Fachbeiträge, z. B. Unlock Region bei Audi MLBevo (A4, A5, Q5, Q7) mit Kostal-Vorfeldkamera; DABfix für MHI2-Navigationssysteme ohne Hardwaretausch
 - [Impressum](https://lhnext.github.io/impressum.html): Rechtliche Anbieterkennzeichnung
 - [Datenschutz](https://lhnext.github.io/datenschutz.html): Datenschutzerklärung
 - [AGB](https://lhnext.github.io/agb.html): Allgemeine Geschäftsbedingungen
